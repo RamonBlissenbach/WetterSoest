@@ -1,0 +1,253 @@
+/*+++gemeral Site+++*/
+
+@font-face {
+    font-family: 'customfont1'; /* Gewünschter Name */
+    src: url('Resource/Fredoka/Fredoka-VariableFont_wdth_wght.ttf') 
+              format('truetype');
+            /* für Safari, Android, iOS */
+   }
+@font-face {
+    font-family: 'customfont2'; /* Gewünschter Name */
+    src: url('Resource/Pacifico/Pacifico-Regular.ttf') 
+              format('truetype');
+            /* für Safari, Android, iOS */
+}
+
+body {
+    font-family: "customfont1";
+    font-size: 24pt;
+    background: url(Resource/Background/Tag.jpg);
+    background-size:110%;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    transition: 2s;
+}
+
+p {
+    font-size: 24pt;
+    font-family: "customfont1";
+}
+
+a {
+    font-family: "customfont1";
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+#cutline {
+    color:rgb(120, 205, 150);
+}
+
+.boxstyle {
+    border:solid;
+    border-color:rgb(0, 0, 0);
+    background:rgb(170, 255, 200);
+    border-top-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    transition: 1.5s;
+}
+
+/*+++Home+++*/
+/*+++Menue+++*/
+#OpenMenue {
+    height: 120px;
+    width: 120px;
+    background: url(https://img.icons8.com/clouds/120/000000/menu-2.png);
+    border-top-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+}
+
+#Menue {
+    width:16%;
+    height: auto;
+    list-style: none;
+    padding: 0px;
+    display: none;
+}
+
+.MenItem {
+    background:rgb(170, 255, 200);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    transition: 1.5s;
+    user-select: none;
+}
+
+
+#DarkmodeBtn {
+    width: auto;
+    margin-right: 1px;
+    height: 40px;
+}
+
+
+/*+++Caption Stuff+++*/
+#CaptionBan {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Caption {
+    font-family:"customfont2";
+    font-size: 40pt;
+    margin-top: 2.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5px;
+}
+
+#CapContainer {
+    width:70%;
+    padding-left:15%;
+    padding-right:15%;
+}
+
+/*+++Table Sutff+++*/
+
+#QuickContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#QuickOverview {
+    margin-top: 200px;
+    width: 1280px;
+}
+
+.QuickTableDayS {
+    width: 160px;
+}
+
+.QuickTableDayZ {
+    height: 150px;
+}
+
+/*+++Daily Stuff+++*/
+
+#DailyAdvise {
+    height: 140px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 300px;
+}
+
+#Advises {
+    width:600px;
+    float: left;
+    height: 300px;
+}
+#Karte {
+    width:600px;
+    float: left;
+    height: 300px;
+    margin-left: 10px;
+}
+
+.AdviseBox {
+    margin-top: 10px;
+}
+
+/*+++Suche+++*/
+
+/*+++Form+++*/
+#searchContainer {
+    margin: 0;
+}
+
+#SearchBar {
+    width:500px;
+    height: 100px;
+    margin-top: 5%;
+    margin-left: 34%;
+    margin-right: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    font-size: 25pt;
+    transition: 2s;
+}
+
+#SearchBar:hover {
+    background:rgb(215, 215, 215);
+}
+
+
+#SearchSubmit {
+    background-image: url(Resource/Icons/lupe.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    margin-left: 2px;
+    width: 135.5px;
+    height: 100px;
+    margin-top: 5%;
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+    font-size: 25pt;
+}
+
+#ResContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ResBox {
+    width: 70%;
+    height: fit-content;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+#Res {
+    height: fit-content;
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    width: 75%;
+    margin-left: 10%;
+    display: flex;
+}
+
+#DateCap{
+    margin-left: 5%;
+}
+
+#DateValues {
+    margin-left: 2.5%;
+}
+
+#StateBox{
+    border: solid;
+    border-radius: 0.4rem;
+    height: 300px;
+    width: 300px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* +++Credit+++ */
+
+.CreditEntry {
+    text-align: center;
+}
+
+.CreditWidth {
+    width:70%;
+    padding-left:15%;
+    padding-right:15%;
+}
+
+
+#Ostern {
+    font-size: 10pt;
+}
