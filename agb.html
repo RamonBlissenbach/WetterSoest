@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="Lasse dir das aktuelle Wetter in Soest anzeigen.">
+    <meta name="keywords" content="soest,wetter,wetter-soest,wettersoest">
+    <meta name="author" content="Ramon Blissenbach">
+    <meta name="copyright" content="© 2023 WetterSoest">
+    <meta property="og:title" content="WetterSoest - Aktuelle Wettervorhersage und Informationen">
+    <meta property="og:description" content="Ihre Quelle für das Wetter in Soest und Umgebung.">
+    <meta property="og:image" content="https://example.com/cover.jpg">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="de">
+    <meta name="country" content="DE">
+    <title>WetterSoest - AGB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+
+        #scrollable-div {
+            max-height: 300px; /* Legen Sie die gewünschte maximale Höhe fest */
+            overflow: auto;    /* Aktiviert die Scrollleiste, wenn der Inhalt die maximale Höhe überschreitet */
+        }
+
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="d-flex h-100 text-center text-bg-dark">
+<div id="loader-container">
+    <div id="loader"></div>
+</div>
+<div id="background"></div>
+<div id="overlay"></div>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" data-bs-theme="dark">
+    <header class="mb-auto">
+        <div>
+            <h3 class="float-md-start mb-0" id="header">WetterSoest</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link fw-bold py-1 px-0" href="details.html">Details</a>
+                <a class="nav-link fw-bold py-1 px-0" href="team.html">Team</a>
+                <a class="nav-link fw-bold py-1 px-0"target="_blank" href="https://github.com/RamonBlissenbach/WetterSoest">Github</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="px-3 my-auto text-center">
+        <div class="card" id="scrollable-div">
+            <h1>Allgemeine Geschäftsbedingungen (AGB) für die Nutzung unserer Website</h1>
+
+            <p><strong>1. Geltungsbereich</strong></p>
+            <p>Diese Allgemeinen Geschäftsbedingungen (nachfolgend "AGB") regeln die Nutzung der Wetter-Soest.DE Website (nachfolgend "Website"), die von WetterSoest (nachfolgend "Anbieter" oder "wir") betrieben wird. Die Nutzung der Website unterliegt der Zustimmung zu diesen AGB. Mit der Nutzung der Website erklären Sie sich mit diesen AGB einverstanden.</p>
+
+            <p><strong>2. Änderungen der AGB</strong></p>
+            <p>Wir behalten uns das Recht vor, diese AGB jederzeit zu ändern. Änderungen werden auf der Website veröffentlicht, und die Nutzung der Website nach Veröffentlichung der geänderten AGB gilt als Annahme dieser Änderungen.</p>
+
+            <p><strong>3. Nutzung der Website</strong></p>
+            <p><strong>3.1 Registrierung</strong></p>
+            <p>Die meisten Funktionen der Website können ohne Registrierung genutzt werden. Bei der Registrierung sind Sie verpflichtet, korrekte und aktuelle Informationen anzugeben. Sie sind für die Geheimhaltung Ihrer Zugangsdaten verantwortlich und haften für alle Aktivitäten, die unter Ihrem Konto stattfinden.</p>
+
+            <p><strong>3.2 Altersbeschränkung</strong></p>
+            <p>Die Nutzung der Website steht nur Personen ab einem Mindestalter von 18 Jahren oder einem höheren gesetzlichen Mindestalter in Ihrer Gerichtsbarkeit zur Verfügung. Durch die Nutzung der Website bestätigen Sie, dass Sie das erforderliche Mindestalter erreicht haben.</p>
+
+            <p><strong>4. Haftungsausschluss</strong></p>
+            <p><strong>4.1 Genauigkeit der Informationen</strong></p>
+            <p>Die auf der Website bereitgestellten Wetterinformationen sind möglicherweise nicht immer genau und aktuell. Wir übernehmen keine Gewähr für die Richtigkeit, Vollständigkeit oder Zuverlässigkeit der bereitgestellten Daten.</p>
+
+            <p><strong>4.2 Haftungsausschluss</strong></p>
+            <p>Der Anbieter haftet nicht für direkte oder indirekte Schäden, die aus der Nutzung oder Unmöglichkeit der Nutzung der Website resultieren. Dies schließt Schäden durch Datenverlust, entgangenen Gewinn, Geschäftsunterbrechung oder andere Vermögensschäden ein.</p>
+
+            <p><strong>4.3 Informationen ohne Gewähr</strong></p>
+            <p>Alle auf der Website bereitgestellten Informationen, einschließlich Wettervorhersagen und meteorologischer Daten, erfolgen ohne Gewähr. Nutzer sollten die bereitgestellten Informationen nur als allgemeine Richtlinien verwenden und sich nicht ausschließlich darauf verlassen.</p>
+
+            <p><strong>5. Urheberrecht</strong></p>
+            <p>Die Inhalte der Website, einschließlich Texte, Grafiken, Bilder, Software und andere Materialien, sind urheberrechtlich geschützt. Die Vervielfältigung, Verbreitung oder Veröffentlichung von Inhalten der Website ohne vorherige schriftliche Zustimmung des Anbieters ist untersagt.</p>
+
+            <p><strong>6. Datenschutz</strong></p>
+            <p>Wir verarbeiten personenbezogene Daten gemäß unserer Datenschutzerklärung, die auf der Website verfügbar ist. Mit der Nutzung der Website stimmen Sie der Verarbeitung Ihrer personenbezogenen Daten gemäß dieser Erklärung zu.</p>
+
+            <p><strong>7. Beendigung der Nutzung</strong></p>
+            <p>Der Anbieter behält sich das Recht vor, Ihre Nutzung der Website ohne Vorankündigung zu beenden oder zu sperren, wenn Sie gegen diese AGB verstoßen oder wenn wir dies aus anderen legitimen Gründen für erforderlich halten.</p>
+
+            <p><strong>8. Schlussbestimmungen</strong></p>
+            <p>Diese AGB unterliegen dem Recht der Bundesrepublik Deutschland. Gerichtsstand für Streitigkeiten im Zusammenhang mit diesen AGB ist [Ort].</p>
+
+            <p>Diese Allgemeinen Geschäftsbedingungen treten in Kraft, sobald Sie die Website nutzen. Wenn Sie diesen Bedingungen nicht zustimmen, sind Sie nicht berechtigt, die Website zu nutzen.</p>
+
+        </div>
+    </main>
+
+    <footer class="mt-auto text-white-50">
+        <p>© WetterSoest - <a href="imprint.html">Impressum</a> <a href="privacy.html">Datenschutz</a> <a href="agb.html">AGB</a></p>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script type="module" src="assets/js/title.js"></script>
+<script type="module" src="assets/js/background.js"></script>
+<script type="module" src="assets/js/wetter.js"></script>
+<script>
+    window.addEventListener("load", function () {
+        var loaderContainer = document.getElementById("loader-container");
+        loaderContainer.classList.add("fade-out");
+        loaderContainer.addEventListener("animationend", function () {
+            loaderContainer.style.display = "none";
+        });
+    });
+</script>
+</body>
+</html>
