@@ -3,22 +3,22 @@ import { getWeatherState } from "./wetter.js";
 // Ein Array mit den Dateinamen der Bilder im Ordner
 const bilder = {
     sun: [
-        'pexels-elias-tigiser-1083342.jpg',
-        'pexels-tomasz-filipek-1646178.jpg',
-        'pexels-valentin-s-589816.jpg',
+        'pexels-elias-tigiser-1083342.webp',
+        'pexels-tomasz-filipek-1646178.webp',
+        'pexels-valentin-s-589816.webp',
     ],
     rain: [
-        'pexels-eberhard-grossgasteiger-1743392.jpg',
-        'pexels-josh-hild-2448749.jpg',
-        'pexels-kaique-rocha-125510.jpg',
+        'pexels-eberhard-grossgasteiger-1743392.webp',
+        'pexels-josh-hild-2448749.webp',
+        'pexels-kaique-rocha-125510.webp',
     ],
     storm: [
         // Füge hier die Dateinamen für das Sturm-Wetter hinzu
     ],
     night: [
-        'pexels-james-wheeler-1539225.jpg',
-        'pexels-pixabay-315938.jpg',
-        'pexels-steven-arenas-379419.jpg',
+        'pexels-james-wheeler-1539225.webp',
+        'pexels-pixabay-315938.webp',
+        'pexels-steven-arenas-379419.webp',
     ]
 };
 
