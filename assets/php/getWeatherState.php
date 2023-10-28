@@ -42,7 +42,7 @@ function calculateWeatherStatus($temperature, $pressure, $humidity, $precipitati
         return 'sun';
     } elseif ($precipitation > 0.01) {
         return 'rain';
-    } elseif ($uv <= 0.5) {
+    } elseif ($uv <= 0.15) {
         return 'night';
     } else {
         return 'sun';
